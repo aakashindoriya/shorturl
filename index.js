@@ -2,10 +2,10 @@ const express=require("express");
 const fs=require("fs");
 const connect = require("./db.connect");
 const  Short  = require("./data.model");
-dotenv.config()
+
 let app=express()
 app.use(express.json())
-app.get("/",(req,res)=>{
+app.get("/hey",(req,res)=>{
     res.send("welcome")
 })
 
