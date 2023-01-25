@@ -30,6 +30,6 @@ app.get("/:id",async(req,res)=>{
 })
 
 app.listen(8080,async()=>{
-  await connect()
-  console.log("listenning to 8080")
+    console.log("listenning to 8080")
+    await connect()
 })
