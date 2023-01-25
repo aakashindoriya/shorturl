@@ -19,7 +19,7 @@ app.post("/",async(req,res)=>{
         name:req.body.name
     })
     fs.writeFileSync("./db.json",JSON.stringify(data))
-   return res.status(201).send({url:`http://localhost:8080/${req.body.name}`})
+   return res.status(201).send({url:`https://fair-gray-jay-shoe.cyclic.app/${req.body.name}`})
 })
 
 app.get("/:id",async(req,res)=>{
