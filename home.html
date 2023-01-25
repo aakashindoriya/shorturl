@@ -18,6 +18,7 @@
             border: 1px solid gainsboro;
             border-radius: 2%;
             background-color: rgb(121, 155, 155);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             
         }
         input {
@@ -44,6 +45,11 @@
             font-weight: bolder;
             font-style: oblique;
         }
+        h1{
+            margin: 0%;
+            font-family: cursive;
+            color: rgb(75, 67, 67);
+        }
         @media screen and (max-width:600px) {
             #form{
             display: flex;
@@ -63,10 +69,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aakash</title>
 </head>
 <body>
+   
     <div id="form">
+        <h1>SHORT IT OUT</h1>
         <input placeholder="url" id="url"/>
         <input placeholder="nickname*(unique)" id="name" />
         <button onclick="short()">Short</button>
@@ -76,7 +84,7 @@
         <p id="res">URL</p>
     </div>
     <div>
-        <h1>How To use</h1>
+        <h2>How To use</h2>
         <p>Provide a url that you want to short give a unique nickname to your url <br> <b>Congrats! you recived a short url with a nickname</b></p>
     </div>
 </body>
