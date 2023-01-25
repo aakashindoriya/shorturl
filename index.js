@@ -1,7 +1,6 @@
 const express=require("express");
 const fs=require("fs");
 const connect = require("./db.connect");
-const dotenv=require("dotenv");
 const  Short  = require("./data.model");
 dotenv.config()
 let app=express()
