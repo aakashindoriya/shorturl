@@ -2,11 +2,12 @@ const express=require("express");
 const fs=require("fs");
 const connect = require("./db.connect");
 const  Short  = require("./data.model");
-
+const cors=require("cors")
 let app=express()
+app.use(cors())
 app.use(express.json())
-app.get("/hey",(req,res)=>{
-    res.send("welcome")
+app.get("/",(req,res)=>{
+    res.sendFile("./home.html",{root:__dirname})
 })
 
 app.post("/",async(req,res)=>{
@@ -20,11 +21,15 @@ app.post("/",async(req,res)=>{
 
 app.get("/:id",async(req,res)=>{
     
+   try{
     let item=await Short.findOne({name:req.params.id})
     if(item){
        return res.redirect(item.url)
     }
     res.send("<h1>sorry</h1>")
+   }catch(e){
+    return res.status(401).send({url:e.message})
+   }
 
 })
 
