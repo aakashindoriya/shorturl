@@ -1,4 +1,4 @@
-# shorturl
+# shorturl https://fair-gray-jay-shoe.cyclic.app/
 A nodejs app that provide a short url
 Provide a url that you want to short & give it a unique nickname  
 Congrats! you recived a short url with a your nickname
