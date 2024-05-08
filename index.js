@@ -13,7 +13,7 @@ app.get("/",(req,res)=>{
 app.post("/",async(req,res)=>{
      try{
         let data=await Short.create(req.body)
-         return res.status(201).send({url:`https://fair-gray-jay-shoe.cyclic.app/${req.body.name}`})
+         return res.status(201).send({url:`https://shorturl-pv3n.onrender.com/${req.body.name}`})
      }catch(e){
         return res.status(401).send(e.message)
      }
